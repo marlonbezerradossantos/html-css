@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            background-color: dimgrey;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1px 15px 20px 15px;
+        }
+
+        header {
+            background-color: white;
+            margin: 20px auto;
+            width: 1000px;
+            padding-bottom: 20px;
+            border-radius: 7px;
+            
+        }
+
+        header > h1 {
+            padding-top: 20px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        nav{
+            background-color: rgb(51, 51, 51);
+            padding:3px;
+            box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.384);
+            width: 970px;
+            margin:auto;
+        }
+
+        a{
+            color: aliceblue;
+            text-decoration: none;
+            padding-right: 40px;
+            padding-left: 20px;
+        }
+
+        nav > a:hover {
+            color: aqua;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            width: 1000px;
+            height: 530px;
+            margin: auto;
+            border-radius: 7px;
+        }
+
+        footer {
+            background-color: black;
+            width: 1000px;
+            margin: 10px auto;
+        }
+
+        footer > p {
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+            
+        }
+
+        section {
+            padding: 10px;
+            width: 950px;
+            height: 850px;
+            margin: auto;
+        }
+
+        article {
+            padding: 10px;
+            background-color: rgb(153, 153, 153);
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.397);
+            border-radius: 7px;
+        }
+
+        aside {
+            background-color: black;         
+        }
+
+
+        aside > p {
+            color: aliceblue;
+            text-align: right;
+            margin: 1px;
+            padding: 4px;
+        }
+
+        section > h2 {
+            border: 1px solid rgb(129, 47, 47);
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site Usando Grouping Tags</h1>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Assuntos do cotidiano</h2>
+            <article>
+                <h2>Brasil Perde a Copa jajaja</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eaque ratione fuga eveniet odio sit! Dolore delectus quidem temporibus nobis praesentium sed, laboriosam saepe. Repellendus aut ab adipisci ipsam omnis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae consequuntur qui reiciendis at, perspiciatis iste deserunt veritatis laudantium ad quaerat quasi sed distinctio harum ratione molestias obcaecati provident facere earum.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit libero, vitae molestiae reprehenderit aspernatur id quo. Aliquid ab sed dolores! Provident voluptate modi enim officiis, id sapiente praesentium atque deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officia doloribus voluptatum porro eius minima quia, explicabo, nostrum ipsa quod ullam inventore eum aperiam optio iusto natus sit reprehenderit omnis!</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eaque ratione fuga eveniet odio sit! Dolore delectus quidem temporibus nobis praesentium sed, laboriosam saepe. Repellendus aut ab adipisci ipsam omnis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae consequuntur qui reiciendis at, perspiciatis iste deserunt veritatis laudantium ad quaerat quasi sed distinctio harum ratione molestias obcaecati provident facere earum.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit libero, vitae molestiae reprehenderit aspernatur id quo.explicabo, nostrum ipsa quod ullam inventore eum aperiam optio iusto natus sit reprehenderit omnis!</p>
+                
+                <aside>
+                    <p>Artigo Escrito por Visual Studio Code.</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Marlon Bezerra</p>
+    </footer>
+</body>
+</html>

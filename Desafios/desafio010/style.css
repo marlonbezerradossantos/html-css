@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'idroid';
+    src: url(pacote-projeto-d010/fontes/idroid.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family= Oswald & display família= Oswald:wght@400;500;700 & swap');
+
+body {
+    background-color: #00d83d71;
+}
+
+header  {
+    background-image: linear-gradient(to bottom, #086408, #043004);
+    background-attachment: fixed;
+    height: 185px;
+    margin-top: -9px;
+   
+    
+}
+
+h1#cabecalho {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0px;
+    padding-top: 20px;
+    color: rgba(252, 239, 239, 0.884);
+    text-shadow: 3px 2px 2px black;
+}
+
+p#header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 2px 2px black;
+    color: rgba(255, 255, 255, 0.692);
+    padding: 33px;
+    margin-top: -7px;
+    margin-bottom: -3px;
+    margin: auto;
+}
+
+nav{
+    margin: auto;
+}
+
+.nav {
+    margin-left: 10px;
+    padding: 7px;
+    color: rgba(235, 235, 235, 0.904);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-shadow: 0px 1px 2px black;
+}
+
+a:hover {
+    background-color: #02ad02;
+    border-radius: 2px;
+    text-decoration: underline;
+}
+
+a#padd {
+    margin-left: 15px;
+}
+
+main {
+    background-color: white;
+    width: 900px;
+    height: 2405px;
+    margin: 0px auto;
+    border-radius: 7px;
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.39);
+}
+
+
+
+.idroid {
+    font-family: 'idroid';
+}
+
+#titulo {
+    padding-left: 20px;
+    padding-top: 30px;
+    font-size: 2.3em;
+    color: #1a521a;
+    text-shadow: 0px 1px 2px black;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+    width: 870px;
+    height: 21px;
+    padding-left: 20px;
+    font-family: sans-serif;
+}
+
+strong {
+    color: #036d03;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 10px;
+    padding-left: 20px;
+    color: #1a521a;
+    background-image: linear-gradient(to right, #24c7244d, rgba(255, 255, 255, 0));
+}
+
+
+.link {
+    color: #036d03;
+    font-weight: 700;
+    background-color: #02ad026c;
+    padding: 2px;
+    text-decoration: none;
+    padding-right: 0px;
+    margin-right: 0px;
+    border-radius: 3px;
+}
+
+.link:hover{
+    text-decoration: underline;
+    background-color: #02ad026c;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+div#video{
+    margin-top: 47px;
+    display: flex;
+    justify-content: center;
+    padding-top: 34px;
+}
+
+#sec_vid {
+    height: 494px;
+    background-color: #024e02;
+} 
+
+iframe {
+    height: 420px;
+    width: 835px;
+}
+
+#info_ad {
+    background-color: #83E1AD;
+    width: 848px;
+    height: 440px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#aprender_mais {
+    color: white;
+    background-color: #14914a;
+    border-radius: 10px 10px 0px 0px;
+    height: 38px;
+    padding-left: 20px;
+    padding-top: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.extra {
+    width: 817px;
+    height: 115px;
+}
+
+#id_extra {
+    height: 44px;
+}
+
+.list {
+    display: inline-block;
+    margin-top: -86px;
+    padding-right: 130px;
+}
+
+ol {
+    list-style-image: url(pacote-projeto-d010/imagens/Accept-icon.png);
+}
+
+#msg_final {
+    width: 847px;
+    padding-left: 26px;
+}
+
+.cor {
+    color: rgb(0, 59, 0);
+    font-weight: 600;
+}
+
+footer {
+    background-color: #063D1E;
+    margin: 18px 0px 0px 0px;
+    text-align: center;
+    color: aliceblue;
+    padding: 2px;
+}
+
+.mencao {
+    font-weight: 900;
+}

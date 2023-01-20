@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+p#texto-escondido{
+    display: none ;
+    color: blueviolet;
+    background-color: aliceblue;
+}
+
+div{
+    color:rgb(245, 229, 229);
+    width: 150px;
+}
+div:hover > p#texto-escondido{
+    display:block;
+}
+
+.fundo{
+    background-color: blue;
+}

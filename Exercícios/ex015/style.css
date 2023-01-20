@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* charset para evitar erros de acentuação */
+
+
+body{
+    background-color: rgb(10, 10, 10);
+}
+h1{
+    color: rgb(37, 57, 94);
+}
+h2{
+    color:lightskyblue
+}
+p{
+    color: white;
+}
