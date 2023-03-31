@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family= Open+Sans:ital,wght@0,300;1,800 & display =swap');
+
+
+* {
+    margin: 0px;
+}
+
+
+header {
+    background-color: rgba(128, 128, 128, 0.466);
+    padding-bottom: 22px;
+    font-family: 'Open Sans';
+}
+
+#topo {
+    padding-bottom: 10px;
+}
+
+#topo > h3 {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+#top_dir {
+    padding-left: 637px;
+}
+
+
+#menu {
+    padding-top: 10px;
+}
+
+#menu > h3 {
+    display: inline-block;
+    padding-right: 48px;
+}
+
+#menu > img {
+    padding-left: 122px;
+}
+
+#top_dir2 {
+    padding-left: 82px;
+}
