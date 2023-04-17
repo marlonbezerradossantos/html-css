@@ -2,36 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,800&family=Passion+One:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,800&family=Sriracha&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
+:root {
+    --fonte1: 
+}
+
 header {
     background-color: black;
     color: white;
-    min-height: 270px;
     text-align: center;
 }
 
 header > h1 {
-    font-family: 'Passion One', cursive;
-    font-size: 7vw;
-    font-weight: 700;
-    padding-top: 73px;
-    letter-spacing: 1px;
-}
+    padding-top: 50px;
 
-header > p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-header a:hover {
-    text-decoration: underline;
 }
