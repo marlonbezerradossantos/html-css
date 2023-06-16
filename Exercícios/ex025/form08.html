@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um Range mais interativo</title>
+</head>
+<body>
+    <h1>Controle de áudio</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="inivel">Volume:</label>
+            <input type="range" name="nivel" id="inivel" max="100" min="0" value="50" oninput="retorno.innerHTML = Number(inivel.value)">
+            <output id="retorno">50</output>
+        </p>
+    </form>
+</body>
+</html>
