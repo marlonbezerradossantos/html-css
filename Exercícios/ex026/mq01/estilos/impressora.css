@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Versão para impressora*/
+
+head title {
+    display: none;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+header li {
+    display: none;
+}
+
+main article {
+    text-align: justify;
+}
+
+main article::after {
+    content: "Criado dia 22/06/23, pelo www.cursoemvideo.com";
+}
