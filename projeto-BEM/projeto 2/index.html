@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia BEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main class="main">
+        <h1 class="main__title">Questionário DEV</h1>
+        <form action="#" method="get" class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Dados Pessoais</legend>
+                <p class="form__p">
+                    <label for="nome" class="form__label">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" class="form__input">
+                </p>
+                <p class="form__p">
+                    <label for="email" class="form__label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form__email">
+                </p>
+                <p class="form__p">
+                    <label for="endereco" class="form__label">Endereço:</label>
+                    <input type="text" class="form__input">
+                </p>
+                <p class="form__p">
+                    <label for="idade" class="form__label">Idade:</label>
+                    <input type="number" min="1" max="120" id="idade" name="idade" class="form__input">
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+            <legend class="form__legend">Questionário</legend>
+                <p class="form__p">
+                    Sexo:
+                    <input type="radio" name="sexo" id="masc" value="M" checked class="form__input"><label for="masc" class="form__label">Masculino</label>
+                    <input type="radio" name="sexo" id="fem" value="F" class="form__input"><label for="fem" class="form__label">Feminino</label>
+                </p>
+                <p>
+                    <label for="area" class="form__label">Área:</label>
+                    <select name="area" id="area" class="form__input">
+                        <option value="" selected disabled class="form__inputopt">Selecione</option>
+                        <option value="front-end" class="form__inputopt">Front-end</option>
+                        <option value="back-end" class="form__inputopt">Back-end</option>
+                        <option value="fullstack" class="form__inputopt">Full-Stack</option>
+                    </select>
+                </p>
+        </fieldset>
+        </form>
+   </main>
+</body>
+</html>
