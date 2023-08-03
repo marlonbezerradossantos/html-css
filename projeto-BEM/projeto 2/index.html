@@ -14,31 +14,32 @@
                 <legend class="form__legend">Dados Pessoais</legend>
                 <p class="form__p">
                     <label for="nome" class="form__label">Nome completo:</label>
-                    <input type="text" id="nome" name="nome" class="form__input">
+                    <input type="text" id="nome" name="nome" size="39" required class="form__input">
                 </p>
                 <p class="form__p">
                     <label for="email" class="form__label">E-mail</label>
-                    <input type="email" id="email" name="email" class="form__email">
+                    <input type="email" id="email" name="email" size="50" required class="form__input">
                 </p>
                 <p class="form__p">
                     <label for="endereco" class="form__label">Endereço:</label>
-                    <input type="text" class="form__input">
+                    <input type="text" size="46" required class="form__input">
                 </p>
                 <p class="form__p">
                     <label for="idade" class="form__label">Idade:</label>
-                    <input type="number" min="1" max="120" id="idade" name="idade" class="form__input">
+                    <input type="number" min="18" max="120" id="idade" name="idade" required value="18" class="form__input">
                 </p>
             </fieldset>
             <fieldset class="form__fieldset">
             <legend class="form__legend">Questionário</legend>
-                <p class="form__p">
+                <p class="form__p form__p--spacebottom">
                     Sexo:
-                    <input type="radio" name="sexo" id="masc" value="M" checked class="form__input"><label for="masc" class="form__label">Masculino</label>
-                    <input type="radio" name="sexo" id="fem" value="F" class="form__input"><label for="fem" class="form__label">Feminino</label>
+                    <input type="radio" name="sexo" id="masc" value="M" checked class="form__input"><label for="masc" class="form__label form__label--blue">  Masculino</label>
+
+                    <input type="radio" name="sexo" id="fem" value="F" class="form__input form__input--space"><label for="fem" class="form__label form__label--pink">  Feminino</label>
                 </p>
-                <p>
+                <p class="form__p">
                     <label for="area" class="form__label">Área:</label>
-                    <select name="area" id="area" class="form__input">
+                    <select name="area" id="area" class="form__input form__select--larger" required>
                         <option value="" selected disabled class="form__inputopt">Selecione</option>
                         <option value="front-end" class="form__inputopt">Front-end</option>
                         <option value="back-end" class="form__inputopt">Back-end</option>
@@ -46,6 +47,11 @@
                     </select>
                 </p>
         </fieldset>
+
+        <p class="form__p form__p--center">
+            <input type="reset" value="Limpar" class="form__button">
+            <input type="submit" class="form__button">
+        </p>
         </form>
    </main>
 </body>
