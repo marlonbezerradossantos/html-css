@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(72, 255, 0, 0.603);
+    width: 95vw;
+    height: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.item {
+    background-color: rgba(0, 0, 255, 0.63);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
