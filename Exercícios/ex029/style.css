@@ -8,16 +8,16 @@
 
 .container {
     background-color: rgba(72, 255, 0, 0.603);
-    width: 95vw;
+    width: 600px;
     height: 400px;
     margin: auto;
     margin-top: 40px;
 }
 
-.item {
+.item-1, .item-2, .item-3 {
     background-color: rgba(0, 0, 255, 0.63);
     border: 1px solid black;
-    width: 100px;
+    width: 300px;
     height: 100px;
     text-align: center;
 }
