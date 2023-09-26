@@ -8,8 +8,8 @@
 
 .container {
     background-color: rgba(72, 255, 0, 0.603);
-    width: 120px;
- 
+    width: 600px;
+    height: 500px;
     margin: auto;
     margin-top: 40px;
 }
