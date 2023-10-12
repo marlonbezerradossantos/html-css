@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Blocos</title>
+    <style>
+        /* CONCLUSÃO: Aparentemente eu não estava conseguindo configurar o height do meu main no meu outro projeto porque a altura em porcentagem que eu estava colocando não tinha onde se basear pois o elemento <body> não tem uma altura configurada, portanto bastou colocar um height: 100vh; para que o main pudesse se basear. E também os paddings e margins podem quebrar o bloco pai se caso a altura do pai for menor do que a soma do tamanho dos filhos*/
+
+            
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        main {
+            background-color: gray;
+            margin: auto;
+            width: 80vw;
+        }
+
+        .bloco {
+           text-align: center; 
+           height: 100px;
+           width: 50%;
+        }
+
+        #azul {
+            background-color: blue;
+
+        }
+
+        #verde {
+            background-color: green;
+            padding: 20px;
+        }
+
+        #amarelo {
+            background-color: yellow;
+            margin: 10px;
+        }
+
+        #vermelho {
+            background-color: red;
+        }
+
+        #roxo {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="bloco" id="azul">1</div>
+        <div class="bloco" id="verde">2</div>
+        <div class="bloco" id="amarelo">3</div>
+        <div class="bloco" id="vermelho">4</div>
+        <div class="bloco" id="roxo">5</div> 
+    </main>
+</body>
+</html>
