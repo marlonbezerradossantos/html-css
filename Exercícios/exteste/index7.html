@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="responsive.css"
+      media="screen and (max-width: 768px)"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="print.css" media="print">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Source Sans Pro";
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #7159c1;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  max-width: 980px;
+  
+  margin: auto;
+}
+
+header img {
+  width: 150px;
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem; 
+  padding: 2.4rem;
+  transition: all 250ms linear 0s;
+}
+
+header nav ul li a:hover {
+  background: rgba(255,255,255, 0.15)
+}
+
+h2 {
+  color: rgb(75, 75, 75);
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+}
+
+h3 {
+  color: rgb(75, 75, 75);
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: rgb(113, 89, 193);
+  margin: 15px 0px 0px;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 150ms linear 0s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+
+/*=============== 
+HERO
+==================*/
+section.hero {
+  margin: 80px 0;
+}
+
+section.hero .container {
+  width: 90%;
+  max-width: 980px;
+
+  margin: auto;
+
+  display: flex;
+}
+
+section.hero p {
+  color: rgb(154, 142, 191);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin: 10px 0px 0px;
+}
+
+
+
+/*=============== 
+MAIN
+==================*/
+main {
+  margin-bottom: 80px;
+}
+/*=============== 
+CARDS
+==================*/
+.cards {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.text--medium {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  color: #ecf0f1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #7159c1;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.image {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+
+  overflow: hidden;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  margin: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.price {
+  margin-left: auto;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #7159c1;
+  filter: brightness(90%);
+}
+
+/*=============== 
+MODAL
+==================*/
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  background-color: #fff;
+  
+  width: 95%;
+  height: 95%;
+  
+  margin: 0 auto;
+  padding: 10px;
+  
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  opacity: 0;
+  overflow-y: auto;
+  visibility: hidden;
+  
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transform: scale(1.2);
+}
+.modal .close-modal {
+  position: absolute;
+  cursor: pointer;
+
+  top: 5px;
+  right: 15px;
+  
+  opacity: 0;
+  
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+}
+.modal .close-modal svg {
+  width: 18px;
+  height: 18px;
+}
+.modal .modal-content {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal.active .modal-content {
+  opacity: 1;
+}
+.modal.active .close-modal {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  background-color: white;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/*=============== 
+FORM
+==================*/
+#form {
+  width:100%;
+
+  background: #7159c1;
+  padding: 80px 0;
+  margin:0;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form form {
+  width: 90%;
+  max-width: 980px;
+
+  background: white;
+  
+  padding: 40px;
+  
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.15), 
+    0px 10px 20px -10px rgba(0, 0, 0, 0.1)
+}
+
+#form h3 {
+  margin-bottom: 30px
+}
+
+#form form label {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group label.right-inline {
+  text-align: right;  
+  padding-right: 8px;
+  padding-left: 10px;
+  width: auto;
+}
+
+.form-group .input-control {
+  flex: 1 1;
+  display: block;
+  margin: -4px 8px 10px;
+  padding: 12px;
+  font-size: 1.6rem;
+}
+
+#form .button {
+  margin: 20px 8px 10px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img
+          src="./images/logo-rocketseat.svg"
+          alt="Rocketseat"
+        />
+        <div class="menu-section">
+          <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Starter</a>
+              </li>
+              <li>
+                <a href="#">Bootcamp</a>
+              </li>
+              <li>
+                <a href="#">Comunidade</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div>
+          <h2>
+            As melhores tecnologias em programação, direto ao ponto e do jeito
+            certo.
+          </h2>
+          <p>
+            No meio de tanta informação e da quantidade de ferramentas que
+            surgem todos os dias, você precisa de alguém que te leve na direção
+            certa.
+          </p>
+          <a href="#" class="button">Quero embarcar neste foguete!</a>
+        </div>
+        <img
+          src="./images/melhores-tecnologias.svg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <main>
+      <section class="cards">
+        <div class="card">
+          <!--
+          <picture class="image" alt="Imagem">
+            <source media="(min-width: 768px)" srcset="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg">
+            <source media="(min-width: 320px)" srcset="https://i.ytimg.com/vi/rAzHvYnQ8DY/hqdefault.jpg">
+            <source media="(min-width: 10px)" srcset="https://i.ytimg.com/vi/HN1UjzRSdBk/mqdefault.jpg">
+
+            <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" alt="Imagem" />
+            </picture>
+
+          -->
+          <div class="image">
+            <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" />
+          </div>
+          <div class="content">
+            <p class="title text--medium">
+              Formulário Animado com JS puro e CSS Animation | Mayk Brito
+            </p>
+            <div class="info">
+              <p class="text--medium">57 Min</p>
+              <p class="price text--medium">Free</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="form">
+      <form action="">
+        <h3>Quero Estudar na Rocket!</h3>
+        <div class="form-group">
+          <input class="input-control" placeholder="Nome" />
+
+          <input type="email" class="input-control" placeholder="Email" />
+        </div>
+
+        <div class="form-group">
+          <input class="input-control" placeholder="Empresa" />
+        </div>
+
+        <div class="form-group">
+          <input class="input-control" placeholder="Endereço" />
+        </div>
+
+        <div class="form-group">
+          <input class="input-control" placeholder="Cidade" style="flex: 3 1" />
+          <input class="input-control" placeholder="Estado" style="flex: 1" />
+          <input class="input-control" placeholder="CEP" style="flex: 1" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="button">Save</button>
+
+        </div>
+
+      </form>
+    </section>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <svg viewBox="0 0 20 20">
+            <path
+              fill="#000000"
+              d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"
+            ></path>
+          </svg>
+        </a>
+        <div class="modal-content">
+          <div class="video-background">
+            <div class="video-foreground">
+              <iframe
+                src="https://www.youtube.com/embed/GykTLqODQuU"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>
