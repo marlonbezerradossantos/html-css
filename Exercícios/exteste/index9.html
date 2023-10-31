@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            background-color: lightgray;
+            margin: auto;
+            width: 70%;  
+        }
+
+        .container { 
+            margin: auto;
+            position: relative;
+            width: 30%;
+            margin-top: 100px;
+        }
+
+        .imagem {
+            background-color: rgba(4, 128, 0, 0.979);
+            margin-top: 100px ;
+            margin: auto;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        div.overlay {
+            background-color: rgba(0, 195, 255, 0.527);
+            display: none;
+            width: 100%;
+            padding-top: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .container:hover .overlay {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="imagem"></div>
+            <div class="overlay"></div>
+        </section>
+    </main>
+</body>
+</html>
