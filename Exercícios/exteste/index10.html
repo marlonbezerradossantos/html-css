@@ -10,56 +10,27 @@
             margin: 0px;
         }
 
-        div {
+        div:nth-child(even) {
             background-color: royalblue;
             padding: 10px;
         }
 
-        div {
+        div:nth-child(odd) {
             background-color: skyblue;
         }
 
         .container {
-           
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
             grid-auto-rows: 150px;
-            width: 100%;
-
-            grid-template-areas: 
-                "header header header header"
-                "aside  main   main   main"
-                "aside main main main"
-                "aside footer footer footer"
-            ;
         }
-
-        .header {
-            grid-area: header;
-        }
-
-        .main {
-            grid-area: main;
-        }
-
-        .aside {
-            grid-area: aside;
-            background-color: red;
-        }
-
-        .footer {
-            grid-area: footer;
-        }
-        
-
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">Header</div>
         <div class="main">Main</div>
-        <div class="aside">Aside</div>
-        <div class="footer">Footer</div>
+       <div>main</div>
     </div>
 </body>
 </html>
