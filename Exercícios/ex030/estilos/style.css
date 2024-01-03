@@ -8,13 +8,59 @@
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    height: 100vh;
+    grid-gap: 2px;
+    grid-template-areas: 
+    "header   header   header   header   header   header"
+    "header   header   header   header   header   header"
+    ".        hero     hero     hero     hero     .     "
+    ".        hero     hero     hero     hero     .     "
+    ".        hero     hero     hero     hero     .     "
+    ".        hero     hero     hero     hero     .     "
+    ".        subs     subs     subs     subs     .     "
+    ".        subs     subs     subs     subs     .     "
+    ".        content  content  content  content  .     "
+    ".        content  content  content  content  .     "
+    "aside    aside    aside    aside    aside    .     "
+    "aside    aside    aside    aside    aside    .     "
+    "footer   footer   footer   footer   footer   footer"
+    "footer   footer   footer   footer   footer   footer"
+    ;
+    text-align: center;
 }
 
-#header {
-    background-color: blue;
-    
+.header {
+    background-color: rgba(0, 0, 255, 0.438);
+    grid-area: header;
 }
 
 .hero {
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.459);
+    grid-area: hero;
+}
+
+.sub {
+    background-color: rgba(128, 0, 128, 0.479);
+}
+
+.subs {
+    grid-area: subs;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 2px;
+}
+
+.content {
+    background-color: rgba(0, 128, 0, 0.521);
+    grid-area: content;
+}
+
+.aside {
+    background-color: rgba(255, 0, 0, 0.534);
+    grid-area: aside;
+}
+
+.footer {
+    background-color: rgba(0, 0, 255, 0.438);
+    grid-area: footer;
 }

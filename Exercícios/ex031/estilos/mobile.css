@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-gap: 4px;
+    height: 100vh;
+    text-align: center;
+}
+
+.title {
+    background-color: rgb(6, 200, 214);
+}
+
+.meta {
+    background-color: rgba(128, 128, 128, 0.63);
+}
+
+.copy1 {
+    background-color: rgba(0, 0, 255, 0.582);
+}
+
+.copy2 {
+    background-color: rgba(71, 25, 25, 0.575);
+}
+
+.media {
+    background-color: rgba(255, 255, 0, 0.534);
+}
+
+.aside {
+    background-color: rgba(255, 123, 0, 0.678);
+}

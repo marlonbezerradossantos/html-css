@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.container {
+    grid-template-columns: repeat(4 , 1fr);
+}
+
+.title {
+    grid-column: 2 / 5;
+}
+
+.meta {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.copy1 {
+    grid-column: 1 / -1;
+}
+
+.copy2 {
+    grid-column: 1 / -1;
+}
+
+.media {
+    grid-column: 1 / 4;
+}
