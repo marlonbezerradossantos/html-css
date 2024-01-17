@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path teste</title>
+    <style>
+        .elemento {
+            display: inline-block;
+            height: 200px;
+            margin-bottom: 10px;
+            margin-right: 100px;
+            width: 200px;
+        }
+
+        .elemento:nth-child(even) {
+            background-color: royalblue;
+        }
+
+        .elemento:nth-child(odd) {
+            background-color: rgb(216, 78, 78);
+        }
+
+        .elemento1 {
+            clip-path: inset(10px 20px 30px 40px);
+        }
+
+        .elemento2 {
+            clip-path: circle(80px at 50% 50%);
+        }
+
+        .elemento3 {
+            height: 400px;
+            clip-path: ellipse();
+        }
+
+        .elemento4 {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="elemento elemento1">1</div>
+    <div class="elemento elemento2">2</div>
+    <div class="elemento elemento3">3</div>
+    <div class="elemento elemento4">4</div>
+</body>
+</html>
