@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balão de fala</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .balao {
+            background-color: royalblue;
+            margin: 10% auto;
+            padding: 5%;
+            text-align: center;
+            width: 20%;
+            position: relative;
+        }
+
+        .balao::after {
+            content: "";
+            background-color: royalblue;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            padding: 10%;
+            position: absolute;
+            top: 100%;
+            left: 80.1%;
+        }
+
+        .balao::before {
+            content: "";
+            background-color: royalblue;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            padding: 10%;
+            position: absolute;
+            top: -43%;
+            left: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="balao">
+        <p class="balao__fala">Hello World!</p>
+    </div>
+</body>
+</html>
