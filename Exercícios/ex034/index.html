@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            border: 2px solid black;
+            height: 100px;
+            margin: auto;
+            margin-right: 10%;
+            text-align: center;
+            width: 100px;
+        }
+
+        .container {
+            display: flex;
+            border: 2px dotted purple;
+        }
+
+        .div1 {
+            background-color: lightblue;
+            transform: translateX(20%) translateY(60%);
+        }
+
+        .div2 {
+            background-color: lightcoral;
+            transform-origin: top left;
+            transform: rotate(20deg);
+        }
+
+        .div3 {
+            background-color: lightgoldenrodyellow;
+            transform-origin: top;
+            transform: scale(2);
+        }
+
+        .div4 {
+           background-color: lightgreen;
+           transform: skewX(10deg);
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="div1">DIV 1</div>
+        <div class="div2">DIV 2</div>
+        <div class="div3">DIV 3</div>
+        <div class="div4">DIV 4</div>
+    </section>
+</body>
+</html>
