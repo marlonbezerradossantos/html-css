@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores</title>
+    <style>
+        section p {
+            background-color: orange;
+        }
+
+        section > p {
+            color: blue;
+        }
+
+        section + p {
+            background-color: green;
+        }
+
+        section ~ p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinadores CSS</h1>
+    <p>Aqui veremos mais sobre os combinadores CSS</p>
+    <section>
+        <p>Este é um filho direto</p>
+        <div>
+            <p>Este é um filho descendente</p>
+        </div>
+    </section>
+    <p>Este é um irmão adjacente</p>
+    <p>Este é um irmão geral</p>
+    <p>este é outro irmão geral</p>
+</body>
+</html>
