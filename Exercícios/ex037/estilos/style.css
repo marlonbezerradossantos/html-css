@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+@keyframes Fly {
+ 
+    from {
+        transform: rotate(-40deg);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translate(50vw, -48vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(calc(100vw - 110px), 0px) rotate(60deg);
+        
+    }
+}
 
 
 body {
@@ -13,26 +30,21 @@ img {
 }
 
 .bird {
-    animation: Fly 5s;
+    /* animation-name: Fly;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 500ms;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
     animation-fill-mode: both;
+    animation-play-state: running; */
+    animation: Fly 3s ease-out 500ms 2 alternate-reverse both running;
     width: 100px;
 }
 
-@keyframes Fly {
- 
-    from {
-        opacity: 0.2;
-        transform: translate(10vw);
-    }
-
-    50% {
-        opacity: 0.7;
-        transform: translate(50vw, -50vh);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(calc(100vw - 110px), 0px);
-    }
+.bird:hover {
+    animation-play-state: paused;
 }
+
+
 
