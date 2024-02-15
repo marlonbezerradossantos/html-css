@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Animation</title>
+    <style>
+        @keyframes Pulse {
+            to {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-color: #252525;
+            height: 100vh;
+            justify-content: center;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            
+            background-color: #1C857D;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+           
+        }
+
+        .pulse {
+            animation: Pulse 1s infinite;
+            display: flex;
+            align-items: center;
+            background-color: #1C857D;
+            border-radius: 50%;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .text {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="pulse">
+            <p class="text">PULSAR</p>
+        </div>
+    </div>
+</body>
+</html>

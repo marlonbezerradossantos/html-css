@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        @keyframes Loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(359deg);
+            }
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .loading {
+            height: 200px;
+            width: 200px;
+            position: relative;
+
+        }
+
+        .load {
+            display: flex;
+            animation: Loading 1s linear infinite;
+            align-items: center;
+            border-radius: 50%;
+            border-top: 3px solid black;
+            height: 100%;
+            justify-content: center;
+            margin: 10% auto;
+            width: 100%;
+        }
+
+        .text {
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            position: absolute;
+            top: 33%;
+            left: 23%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <section >
+        <div class="loading">
+            <div class="load">
+            
+            </div>
+            <p class="text">LOADING</p>
+        </div>
+    </section>
+
+    <section>
+        
+    </section>
+</body>
+</html>

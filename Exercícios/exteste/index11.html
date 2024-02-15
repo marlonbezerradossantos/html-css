@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .lista {
+            display: flex;
+            list-style: none;
+        }
+
+        .item {
+            height: 50px;
+            margin-right: 50px;
+            width: 50px;
+            transform: rotate(-30deg) skewX(20deg);
+            position: relative;
+        }
+
+        .layer {
+            height: 100%;
+            transition: 900ms;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+        }
+
+        .item:nth-child(1) .layer {
+            background-color: red;
+        }
+
+        .item:nth-child(2) .layer {
+            background-color: green;
+        }
+
+        .item:nth-child(3) .layer {
+            background-color: blue;
+        }
+
+
+        .item:hover .layer:nth-child(1) {
+            opacity: 1;
+            transform: translate(40px, -40px);
+        }
+
+        .item:hover .layer:nth-child(2) { 
+            opacity: 0.8;
+            transform: translate(30px, -30px);
+        }
+
+        .item:hover .layer:nth-child(3) {
+            opacity: 0.6;
+            transform: translate(20px, -20px);
+        }
+        .item:hover .layer:nth-child(4) {
+            opacity: 0.4;
+            transform: translate(10px, -10px);
+        }
+
+        .item:hover .layer:nth-child(5) {
+            opacity: 0.2;
+            transform: translate(0px);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="lista">
+        <li class="item">
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+        </li>
+
+        <li class="item">
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            
+        </li>
+
+        <li class="item">
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            <span class="layer"></span>
+            
+        </li>
+    </ul>
+
+    
+</body>
+</html>
