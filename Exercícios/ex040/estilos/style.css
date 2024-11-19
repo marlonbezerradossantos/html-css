@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+main {
+    display: grid;
+    grid-template-areas: 
+    "sec1 sec1 sec sec sec sec sec sec"
+    "sec1 sec1 sec sec sec sec sec sec"
+    "sec1 sec1 sec sec sec sec sec sec"
+    "sec2 sec2 sec sec sec sec sec sec"
+    "sec2 sec2 sec sec sec sec sec sec"
+    "sec2 sec2 sec sec sec sec sec sec"
+    ;
+    grid-gap: 10%;
+}
+
+section {
+    background-color: aquamarine;
+}
+
+.sec1 {
+    grid-area: sec1;
+    
+}
+
+.sec2 {
+    grid-area: sec2;
+}
+
+.sec3 {
+    grid-area: sec3;
+}
+
+.sec4 {
+    grid-area: sec4;
+}
+
+.sec5 {
+    grid-area: sec5;
+}
+
+.sec6 {
+    grid-area: sec6;
+}
+
+.sec7 {
+    grid-area: sec7;
+}
+
+.sec8 {
+    grid-area: sec8;
+}
+
